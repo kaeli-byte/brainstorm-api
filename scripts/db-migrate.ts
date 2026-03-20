@@ -3,8 +3,9 @@ import path from "node:path";
 import process from "node:process";
 import { Pool } from "pg";
 import { getBrainstormApiRoot } from "../src/packageRoot.js";
+import { loadOptionalPackageEnvFile } from "../src/runtime/loadOptionalEnvFile.js";
 
-process.loadEnvFile?.();
+loadOptionalPackageEnvFile();
 
 async function main() {
   const connectionString = process.env.DATABASE_URL?.trim();

@@ -21,8 +21,9 @@ import {
 } from "./orchestration/promptRegistryRepository.js";
 import * as openApi from "./openapi-schemas.js";
 import { registerSwaggerPlugins } from "./swagger-plugins.js";
+import { loadOptionalPackageEnvFile } from "./runtime/loadOptionalEnvFile.js";
 
-process.loadEnvFile?.();
+loadOptionalPackageEnvFile();
 
 type BuildAppOptions = {
   persistence?: StorePersistence;

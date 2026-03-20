@@ -19,6 +19,9 @@ jobs:
     name: Lint, build, test (in-memory)
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      # Ignore any DATABASE_URL on the runner so API tests use in-memory persistence only.
+      DATABASE_URL: ""
     steps:
       - uses: actions/checkout@v4
 
