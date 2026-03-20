@@ -1,0 +1,13 @@
+{
+  "type": "array",
+  "description": "Array of concise idea objects for Diverge.",
+  "items": {
+    "type": "object",
+    "required": ["text"],
+    "properties": {
+      "title": { "type": "string" },
+      "text": { "type": "string" },
+      "rationale": { "type": "string" }
+    }
+  }
+}

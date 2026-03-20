@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "description": "Decision proposal shape for Decide.",
+  "required": ["options", "recommendation", "rationale", "risks", "nextSteps"],
+  "properties": {
+    "options": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["title", "summary"],
+        "properties": {
+          "title": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "recommendation": { "type": "string" },
+    "rationale": { "type": "string" },
+    "risks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "nextSteps": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

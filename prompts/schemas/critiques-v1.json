@@ -1,0 +1,16 @@
+{
+  "type": "array",
+  "description": "Array of critique objects for Challenge.",
+  "items": {
+    "type": "object",
+    "required": ["targetIds", "text"],
+    "properties": {
+      "targetIds": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "text": { "type": "string" },
+      "riskLevel": { "type": "string" }
+    }
+  }
+}

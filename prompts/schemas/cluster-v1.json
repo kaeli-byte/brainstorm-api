@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "description": "Cluster output shape for thematic grouping with explicit bridge and unclustered handling.",
+  "required": ["clusters", "unclusteredIdeaIds"],
+  "properties": {
+    "clusters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "summary", "rationale", "memberIdeaIds", "bridgeIdeaIds", "confidence"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "summary": { "type": "string" },
+          "rationale": { "type": "string" },
+          "memberIdeaIds": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "bridgeIdeaIds": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "unclusteredIdeaIds": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

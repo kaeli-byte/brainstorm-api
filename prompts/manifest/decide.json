@@ -1,0 +1,16 @@
+{
+  "phase": "decide",
+  "roles": ["agent_01", "agent_02", "agent_03"],
+  "roleConfigVersion": "roles-v1",
+  "templateVersion": "decide-v1",
+  "schemaVersion": "decision-v1",
+  "timeoutSeconds": 20,
+  "temperature": 0.3,
+  "templateFile": "prompts/phases/decide/v1.md",
+  "schemaFile": "prompts/schemas/decision-v1.json",
+  "roleFiles": {
+    "agent_01": "prompts/roles/agent_01/v1.json",
+    "agent_02": "prompts/roles/agent_02/v1.json",
+    "agent_03": "prompts/roles/agent_03/v1.json"
+  }
+}

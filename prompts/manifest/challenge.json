@@ -1,0 +1,16 @@
+{
+  "phase": "challenge",
+  "roles": ["agent_01", "agent_02", "agent_03"],
+  "roleConfigVersion": "roles-v1",
+  "templateVersion": "challenge-v1",
+  "schemaVersion": "critiques-v1",
+  "timeoutSeconds": 20,
+  "temperature": 0.4,
+  "templateFile": "prompts/phases/challenge/v1.md",
+  "schemaFile": "prompts/schemas/critiques-v1.json",
+  "roleFiles": {
+    "agent_01": "prompts/roles/agent_01/v1.json",
+    "agent_02": "prompts/roles/agent_02/v1.json",
+    "agent_03": "prompts/roles/agent_03/v1.json"
+  }
+}

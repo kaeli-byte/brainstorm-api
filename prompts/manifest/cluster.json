@@ -1,0 +1,14 @@
+{
+  "phase": "cluster",
+  "roles": ["agent_02"],
+  "roleConfigVersion": "roles-v1",
+  "templateVersion": "cluster-v1",
+  "schemaVersion": "cluster-v1",
+  "timeoutSeconds": 15,
+  "temperature": 0.2,
+  "templateFile": "prompts/phases/cluster/v1.md",
+  "schemaFile": "prompts/schemas/cluster-v1.json",
+  "roleFiles": {
+    "agent_02": "prompts/roles/agent_02/v1.json"
+  }
+}

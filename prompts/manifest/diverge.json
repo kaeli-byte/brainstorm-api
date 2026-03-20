@@ -1,0 +1,16 @@
+{
+  "phase": "diverge",
+  "roles": ["agent_01", "agent_02", "agent_03"],
+  "roleConfigVersion": "roles-v1",
+  "templateVersion": "diverge-v1",
+  "schemaVersion": "ideas-v1",
+  "timeoutSeconds": 15,
+  "temperature": 0.7,
+  "templateFile": "prompts/phases/diverge/v1.md",
+  "schemaFile": "prompts/schemas/ideas-v1.json",
+  "roleFiles": {
+    "agent_01": "prompts/roles/agent_01/v1.json",
+    "agent_02": "prompts/roles/agent_02/v1.json",
+    "agent_03": "prompts/roles/agent_03/v1.json"
+  }
+}
