@@ -31,6 +31,7 @@ If a task conflicts with this document, **stop and reconcile** (update `AGENTS.m
 ### 4. Verification Before Done
 - Never mark a task complete without proving it works
 - Run `pnpm test` and `pnpm build` from **this directory** before finishing
+- For **CI-only failures**, read the real workflow log first (`gh run view … --log-failed` or the Actions UI); env/loadEnv issues often reproduce with **no local `.env`** (see `tasks/lessons.md`)
 - Ask yourself: "Would a staff engineer approve this?"
 
 ---
@@ -93,3 +94,5 @@ pnpm dev
 ```
 
 Use `env.example` as the environment template.
+
+**Note:** `.env` is optional in automation (CI uses workflow `env` / secrets). Runtime loads package-root `.env` only when that file exists (`loadOptionalPackageEnvFile`).
